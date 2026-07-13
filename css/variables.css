@@ -1,0 +1,30 @@
+:root{
+    /*Base colors*/
+    --background-color: #1E1E27;
+    --surface-color: #28242A;
+    --primary-color: #DF0139;
+    --text-color: #E2E2E2;
+
+    /*Derived colors*/
+    --muted-text-color: #B5B5B5;
+    --border-color: #3A343C;
+    --hover-primary-color: #FF2D5E;
+
+    /*Fonts*/
+    --font-heading: 'Sora', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    /*Spacing*/
+    --space-xs: .5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+
+    /*Radius*/
+    --radius-sm: .5rem;
+    --radius-md: .75rem;
+    --radius-lg: 1rem;
+
+    /*Transition*/
+    --transition: .3s ease;
+}
