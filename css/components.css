@@ -1,0 +1,39 @@
+/*Dividers*/
+
+hr{
+    border: none;
+    height: 1px;
+    background: var(--muted-text-color);
+    margin: var(--space-md) 0;
+}
+
+/*Minimalist buttons*/
+
+.buttons a{
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--muted-text-color);
+    border-radius: 50%;
+
+    color: var(--muted-text-color);
+    text-decoration: none;
+
+    transition: all var(--transition);
+}
+
+.buttons a svg{
+    width: 20px;
+    height: 20px;
+    transition: inherit;
+}
+
+.buttons a:hover{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+

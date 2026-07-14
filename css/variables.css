@@ -6,13 +6,18 @@
     --text-color: #E2E2E2;
 
     /*Derived colors*/
-    --muted-text-color: #B5B5B5;
+    --muted-text-color: #5A5661;
     --border-color: #3A343C;
     --hover-primary-color: #FF2D5E;
 
     /*Fonts*/
     --font-heading: 'Sora', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 2rem;
+    --font-size-hero: clamp(2rem, 5vw, 4rem);
 
     /*Spacing*/
     --space-xs: .5rem;

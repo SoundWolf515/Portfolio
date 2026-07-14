@@ -1,0 +1,27 @@
+body{
+    background-color: var(--background-color);
+}
+
+h1{
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    font-size: 50px;
+}
+
+h1 span{
+    color: var(--primary-color);
+}
+
+h2{
+    font-family: var(--font-body);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+}
