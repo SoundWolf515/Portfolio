@@ -8,5 +8,8 @@
 /*Next, the base structure and global design*/
 @import url('layout.css');
 
+/*Don't forget the independent sections*/
+@import url('./sections/hero.css');
+
 /*Last but not least, specific components*/
 @import url('components.css');
