@@ -1,6 +1,8 @@
 /*Dividers*/
 
 hr{
+    width: 80%;
+    justify-self: center;
     border: none;
     height: 1px;
     background: var(--muted-text-color);
