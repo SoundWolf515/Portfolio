@@ -1,0 +1,15 @@
+/*Main stage for the show*/
+
+/*First, need to reset, charge fonts and variables*/
+@import url('reset.css');
+@import url('fonts.css');
+@import url('variables.css');
+
+/*Next, the base structure and global design*/
+@import url('layout.css');
+
+/*Don't forget the independent sections*/
+@import url('./sections/hero.css');
+
+/*Last but not least, specific components*/
+@import url('components.css');

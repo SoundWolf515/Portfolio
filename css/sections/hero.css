@@ -1,0 +1,226 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.profile-picture{
+    position: relative;
+
+    height: 298px;
+    width: 238px;
+
+
+    background-image: url(../../assets/images/profile/profile.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border: 1px solid var(--muted-text-color);
+}
+
+/*Shading Template*/
+.profile-picture::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 45%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.hero-tags{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    gap: var(--space-xs);
+    align-items:flex-start;
+}
+
+.corner{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+}
+
+.tl{
+    top: 6px;
+    left: 6px;
+    border-top: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+}
+
+.tr{
+    top: 6px;
+    right: 6px;
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+
+.bl{
+    bottom: 6px;
+    left: 6px;
+    border-bottom: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+}
+
+.br{
+    bottom: 6px;
+    right: 6px;
+    border-bottom: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+
+/*Location color and size*/
+.location{
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    align-self: center;
+
+    color: var(--primary-color);
+
+    letter-spacing: .35em;
+}
+
+/* Styles for the tags */
+.information{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.information li{
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    letter-spacing: .30em;
+    text-transform: uppercase;
+
+    padding: 0 var(--space-xs);
+
+    color: var(--text-color);
+
+    border: 1px solid var(--muted-text-color);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Verified sign */
+.stage-sign{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .01em   var(--space-xs);
+
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    color: var(--primary-color);
+
+    border: 1px solid var(--primary-color);
+
+    /*Text glow*/
+    text-shadow: 
+    0 0 3px var(--hover-primary-color),
+    0 0 6px var(--hover-primary-color),
+    0 0 12px var(--hover-primary-color);
+
+    /*Border glow*/
+    box-shadow: 
+    0 0 4px var(--hover-primary-color),
+    inset 0 0 4px var(--hover-primary-color);
+
+    animation: neon-flicker 2.8s infinite;
+}
+
+/* Animation for the sign */
+
+@keyframes neon-flicker {
+    0%, 18%, 22%, 24%, 53%, 57%, 100%{
+        opacity: 1;
+
+        text-shadow: 
+        0 0 3px var(--hover-primary-color),
+        0 0 6px var(--hover-primary-color),
+        0 0 12px var(--hover-primary-color);
+
+        box-shadow: 
+        0 0 4px var(--hover-primary-color),
+        inset 0 0 4px var(--hover-primary-color);
+    }
+        20%, 23%, 55%{
+        opacity: .85;
+
+        text-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.description{
+    display: inline-block;
+
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+
+    color: var(--muted-text-color);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+    .hero{
+        position: relative;
+    }
+
+    .profile-picture{
+        width: 100vw;
+        height: auto;
+        aspect-ratio: 238 / 298;
+
+        border: none;
+    }
+
+    .location{
+        color: var(--hover-primary-color);
+    }
+
+    .corner{
+        display: none;
+    }
+
+    .profile-picture::after{
+        opacity: 1;
+        background: linear-gradient(
+            to bottom,
+            transparent,
+            rgba(0, 0, 0, 1)
+        );
+    }
+
+    .hero-content{
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+
+        z-index: 2;
+    }
+
+    .hero-tags{
+        flex-direction:row;
+        align-items:center;
+    }
+}

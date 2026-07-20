@@ -6,7 +6,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(../assets/fonts/sora-v17-latin_latin-ext-regular.woff2) format("truetype");
+    src: url(../assets/fonts/sora-v17-latin_latin-ext-regular.woff2) format("woff2");
 }
 
 /*Space Grotesk*/
@@ -15,5 +15,5 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(../assets/fonts/space-grotesk-v22-latin-regular.woff2) format("truetype");
+    src: url(../assets/fonts/space-grotesk-v22-latin-regular.woff2) format("woff2");
 }

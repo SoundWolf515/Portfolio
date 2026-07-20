@@ -1,0 +1,87 @@
+/* ScrollBar */
+html::-webkit-scrollbar{
+    width: 3px;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--surface-color);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background: var(--hover-primary-color);
+}
+
+body{
+    background-color: var(--background-color);
+}
+/*
+header{
+    position: sticky;
+    top: 0;
+
+    height: 90vh;
+    width: 20%;
+
+    padding: var(--space-sm) var(--space-lg);
+}
+
+header::after{
+    content: "";
+
+    position: absolute;
+    right: 0;
+    top: 5%;
+
+    width: 1px;
+    height: 90%;
+
+    background: var(--border-color);
+}
+*/
+h1{
+    font-family: var(--font-heading);
+    font-size: var(--font-size-hero);
+    font-weight: 900;
+
+    text-transform: uppercase;
+    transform: scaleY(1.06);
+    transform-origin: bottom;
+
+    color: var(--text-color);
+}
+
+h1 span{
+    all: unset;
+    color: var(--primary-color);
+    vertical-align: baseline;
+}
+
+h2{
+    font-family: var(--font-body);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+@media (max-width: 900px){
+
+    h1{
+        max-width:90%;
+    }
+
+    .buttons{
+        display: none;
+    }
+}
