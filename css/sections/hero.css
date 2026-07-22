@@ -6,6 +6,7 @@
 }
 
 .profile-picture{
+    align-self: center;
     position: relative;
 
     height: 298px;
@@ -82,6 +83,8 @@
     font-weight: 700;
     text-transform: uppercase;
 
+    margin-bottom: var(--space-xs);
+
     align-self: center;
 
     color: var(--primary-color);
@@ -91,6 +94,8 @@
 
 /* Styles for the tags */
 .information{
+    max-width: 100%;
+
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -113,6 +118,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    white-space: nowrap;
 }
 
 /* Verified sign */
@@ -186,7 +193,7 @@
     }
 
     .profile-picture{
-        width: 100vw;
+        width: 100%;
         height: auto;
         aspect-ratio: 238 / 298;
 
@@ -222,5 +229,9 @@
     .hero-tags{
         flex-direction:row;
         align-items:center;
+    }
+
+    .description{
+        text-align: center;
     }
 }

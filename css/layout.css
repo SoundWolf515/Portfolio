@@ -1,48 +1,38 @@
-/* ScrollBar */
-html::-webkit-scrollbar{
-    width: 3px;
-}
-
-html::-webkit-scrollbar-track{
-    background: var(--surface-color);
-}
-
-html::-webkit-scrollbar-thumb{
-    background: var(--primary-color);
-    border-radius: 4px;
-}
-
-html::-webkit-scrollbar-thumb:hover{
-    background: var(--hover-primary-color);
+::selection{
+    background-color: var(--hover-primary-color);
+    color: #fff;
 }
 
 body{
     background-color: var(--background-color);
+    display: flex;
+    min-height: 100vh;
 }
-/*
+
 header{
     position: sticky;
     top: 0;
 
-    height: 90vh;
-    width: 20%;
+    height: 85%;
 
-    padding: var(--space-sm) var(--space-lg);
+    align-self: center;
+
+    width: 310px;
+    flex-shrink: 0;
+    padding: var(--space-xs) var(--space-sm);
+    margin-left: var(--space-lg);
+    margin-right: var(--space-sm);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+    border-right: 1px solid var(--border-color);
 }
 
-header::after{
-    content: "";
-
-    position: absolute;
-    right: 0;
-    top: 5%;
-
-    width: 1px;
-    height: 90%;
-
-    background: var(--border-color);
+main{
+    flex: 1;
+    min-width: 0;
+    padding: var(--space-sm);
 }
-*/
+
 h1{
     font-family: var(--font-heading);
     font-size: var(--font-size-hero);
@@ -76,9 +66,24 @@ h2{
 }
 
 @media (max-width: 900px){
+    body{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header{
+        margin: 0;
+        position: static;
+
+        flex: none;
+        width: 100%;
+        padding: 0;
+        border-right: none;
+    }
 
     h1{
         max-width:90%;
+        font-size: var(--font-size-hero-responsive);
     }
 
     .buttons{
